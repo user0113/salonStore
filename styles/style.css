@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 /* nav bar */
 
 header {
@@ -8,29 +16,31 @@ header {
     width: 100%;
 }
 
-nav {
+header nav {
     text-align: start;
     cursor: default;
-    height: 10.5em;
+    height: 15.5em;
     display: flex;
     align-items: center;
+    padding-right: 6px;
+    padding-bottom: 12px;
 }
 
-img {
+header img {
     width: auto;
-    height: 10.5em;
+    height: 15.5em;
     position: relative;
 }
 
-nav ul {
+header nav ul {
     margin-top: 0.5em;
 }
 
-nav li {
+header nav li {
     display: inline-block;
 }
 
-nav a {
+header nav a {
     -moz-transition: background-color .2s ease-in-out;
     -webkit-transition: background-color .2s ease-in-out;
     -ms-transition: background-color .2s ease-in-out;
@@ -49,16 +59,16 @@ nav a {
     padding: 0 1.25em;
 }
 
-nav a:hover {
+header nav a:hover {
     color: #fff !important;
     background: #383838;
 }
 
-nav a.active {
+header nav a.active {
     background: #484848;
 }
 
-nav a.active:before {
+header nav a.active:before {
     content: '';
     display: block;
     position: absolute;
@@ -71,3 +81,21 @@ nav a.active:before {
 }
 
 /* home */
+
+article img {
+    display: block;
+    width: 100%;
+}
+
+/* small */
+
+@media screen and (max-width: 389px) {
+    /* nav bar */
+    header nav {
+        height: 10.5em;
+    }
+    
+    header img {
+        height: 10.5em;
+    }
+}
