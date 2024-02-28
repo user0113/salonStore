@@ -6,6 +6,10 @@ html {
     box-sizing: inherit;
 }
 
+a { 
+    text-decoration: none;
+}
+
 /* nav bar */
 
 header {
@@ -16,20 +20,26 @@ header {
     width: 100%;
 }
 
-header nav {
-    text-align: start;
-    cursor: default;
-    height: 15.5em;
-    display: flex;
-    align-items: center;
-    padding-right: 6px;
-    padding-bottom: 12px;
+header h1 {
+    margin-left: 2vw;
 }
 
 header img {
     width: auto;
-    height: 15.5em;
+    height: 7.5em;
     position: relative;
+    display: block;
+}
+
+header nav {
+    text-align: start;
+    cursor: default;
+    height: 7.5em;
+    display: flex;
+    align-items: center;
+    padding-right: 1vw;
+    padding-bottom: 1vh;
+    margin-right: 3vw;
 }
 
 header nav ul {
@@ -50,13 +60,14 @@ header nav a {
     color: #fff;
     text-decoration: none;
     outline: 0;
-    font-weight: 600;
-    font-size: larger;
+    font-weight: 400;
+    font-size: x-large;
     border-radius: 8px;
     color: #fff;
-    height: 2.5em;
-    line-height: 2.5em;
+    height: 2em;
+    line-height: 2em;
     padding: 0 1.25em;
+    white-space: nowrap;
 }
 
 header nav a:hover {
@@ -80,6 +91,45 @@ header nav a.active:before {
     border-top: solid 0.6em #282828;
 }
 
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-right: 2vw;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+}
+
+.button-wrap {
+    -moz-transition: background-color .2s ease-in-out;
+    -webkit-transition: background-color .2s ease-in-out;
+    -ms-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+    align-items: center;
+    background-color: #282828;
+    border: 2px solid #fff;
+    color: #fff;
+    display: flex;
+    font-weight: 400;
+    font-size: x-large;
+    border-radius: 8px;
+    gap: .25rem;
+    height: 40px ;
+    bottom: 5px;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 1em;
+    position: relative;
+}
+
+.button-wrap:hover, .button-wrap:active {
+    background-color: #383838;
+  }  
+
 /* home */
 
 article img {
@@ -87,15 +137,97 @@ article img {
     width: 100%;
 }
 
-/* small */
+/* large */
 
-@media screen and (max-width: 389px) {
+@media screen and (max-width: 1067px) {
+    
     /* nav bar */
-    header nav {
-        height: 10.5em;
-    }
     
     header img {
-        height: 10.5em;
+        height: 6.5em;
+    }
+
+    header nav {
+        height: 6.5em;
+    }
+    
+}
+
+/* medium */
+
+@media screen and (max-width: 884px) {
+
+    /* nav bar */
+    
+    header img {
+        height: 5.5em;
+    }
+
+    header nav {
+        height: 5.5em;
+    }
+
+    header nav a {
+        font-size: large;
+    }
+
+    .links {
+        gap: 0;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .button-wrap {
+        font-size: large;
+        border-radius: 8px;
+        color: #fff;
+        height: 2em;
+        line-height: 2em;
+    }
+
+}
+
+/* small */
+
+@media screen and (max-width: 617px) {
+
+    /* nav bar */
+
+    header img {
+        height: 3.5em;
+    }
+
+    header nav {
+        height: 8.5em;
+    }
+
+    header nav a {
+        font-size: medium;
+    }
+
+    .button-wrap {
+        font-size: medium;
     }
 }
+
+/* smaller */
+
+@media screen and (max-width: 387px) {
+
+    /* nav bar */
+
+    header img {
+        height: 2.5em;
+    }
+
+    header nav a {
+        font-size: small;
+    }
+
+    .button-wrap {
+        font-size: small;
+    }
+}
+
